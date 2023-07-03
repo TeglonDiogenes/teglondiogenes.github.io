@@ -1,5 +1,6 @@
 ---
 layout: layout/main.njk
+tags: node.js, mocha, chai, expect
 ---
 # Setting Up Mocha and Chai/Expect in a New npm Project
 
