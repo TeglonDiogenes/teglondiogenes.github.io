@@ -5,4 +5,4 @@ title: Nildacha
 
 # Henlo
 
-[Using MOcha with Chai](/mocha-chai-setup)
+[Setting up Mocha and Chai for testing](/mocha-chai-setup)
