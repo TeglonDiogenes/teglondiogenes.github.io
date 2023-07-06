@@ -6,7 +6,7 @@
  */
 const markdownIt = require('markdown-it');
 module.exports =function (config) {
-  config.addLayoutAlias('base', 'layout/base.ejs');
+  config.addLayoutAlias('main', 'layout/maln.njk');
   const options = {
     html: true,
     breaks: true,
