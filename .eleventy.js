@@ -4,6 +4,14 @@
  *
  * Distributed under terms of the MIT license.
  */
+const markdownIt = require('markdown-it');
 module.exports =function (config) {
   config.addLayoutAlias('base', 'layout/base.ejs');
+  const options = {
+    html: true,
+    breaks: true,
+    lnkify: true
+  };
+  config.setLibrary("md",markdownIt(options))
+
 }
