@@ -4,14 +4,21 @@
  *
  * Distributed under terms of the MIT license.
  */
-const markdownIt = require('markdown-it');
+//const markdownIt = require('markdown-it');
 module.exports =function (config) {
-  config.addLayoutAlias('main', 'layout/maln.njk');
   const options = {
     html: true,
     breaks: true,
     lnkify: true
   };
-  config.setLibrary("md",markdownIt(options))
+  //config.dir.output = "docs";
+  //config.setLibrary("md",markdownIt(options))
+  return {
+    dir:{
+      //output:"docs",
+      //includes:"_includes",
+      //layouts:"_layouts",
 
+    }
+  }
 }

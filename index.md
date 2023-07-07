@@ -1,5 +1,5 @@
 ---
-layout: layout/main.njk
+layout: main.njk
 title: Nildacha
 ---
 
