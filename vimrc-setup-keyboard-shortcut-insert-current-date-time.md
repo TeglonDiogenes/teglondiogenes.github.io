@@ -1,6 +1,7 @@
 ---
 layout: layout/main.njk
-tags: vim, vimrc, tricks 
+tags: vim, vimrc, tricks
+addAllPagesToCollections: true
 ---
 ```
 function! InsertCurrentDateTime()
