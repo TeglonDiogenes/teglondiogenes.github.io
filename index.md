@@ -3,7 +3,7 @@ layout: layout/main.njk
 title: Nildacha
 ---
 
-# Henlo Abchcorals!!!
+# Hello Bhok'aralas!
 
 [Setting up Mocha and Chai for testing](/mocha-chai-setup)
 
