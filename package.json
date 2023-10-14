@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy"
+    "build": "eleventy && cp -r _site docs",
+    "deploy": "npm run build && git add . && git commit -m '--wip--' && git push"
   },
   "keywords": [],
   "author": "",
