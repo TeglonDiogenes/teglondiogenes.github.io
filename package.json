@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy && cp -r _site docs",
+    "build": "mkdir docs -p && eleventy && cp -r _site/**/* docs/",
     "deploy": "npm run build && git add . && git commit -m '--wip--' && git push"
   },
   "keywords": [],
