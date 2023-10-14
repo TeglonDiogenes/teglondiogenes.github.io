@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title> 
+  </head>
+  <body>
+    <h1>Setting Up Mocha and Chai/Expect in a New npm Project</h1>
+<p>Mocha is a popular JavaScript testing framework that runs on Node.js and in the browser. It provides a simple and flexible way to write test cases for your JavaScript code. Chai is an assertion library that works well with Mocha and provides a wide range of assertion styles to choose from. Expect is a part of the Chai library and provides a BDD-style assertion syntax.</p>
+<p>In this article, we will guide you through the process of setting up Mocha and Chai/Expect in a new npm project.</p>
+<h2>Prerequisites</h2>
+<p>Before we begin, make sure you have Node.js and npm installed on your system. You can download and install them from the official Node.js website (https://nodejs.org).</p>
+<h2>Step 1: Create a New npm Project</h2>
+<p>First, let's create a new directory for our project and navigate into it:</p>
+<pre><code class="language-bash">mkdir my-project
+cd my-project
+</code></pre>
+<p>Next, initialize a new npm project by running the following command:</p>
+<pre><code class="language-bash">npm init -y
+</code></pre>
+<p>This will create a new <code>package.json</code> file in your project directory.</p>
+<h2>Step 2: Install Mocha and Chai/Expect</h2>
+<p>To install Mocha and Chai/Expect as development dependencies, run the following command:</p>
+<pre><code class="language-bash">npm install mocha chai --save-dev
+</code></pre>
+<p>This will install Mocha and Chai/Expect and save them as dev dependencies in your <code>package.json</code> file.</p>
+<h2>Step 3: Create a Test Directory</h2>
+<p>Next, let's create a directory to store our test files. Conventionally, this directory is named <code>test</code>. Run the following command to create the directory:</p>
+<pre><code class="language-bash">mkdir test
+</code></pre>
+<h2>Step 4: Write Your First Test</h2>
+<p>Now, let's write a simple test case to get started. Create a new file named <code>test.js</code> inside the <code>test</code> directory and add the following code:</p>
+<pre><code class="language-javascript">const expect = require('chai').expect;
+
+describe('Math', () =&gt; {
+  it('should add two numbers correctly', () =&gt; {
+    const result = 1 + 1;
+    expect(result).to.equal(2);
+  });
+});
+</code></pre>
+<p>This test case describes a basic addition operation and expects the result to be equal to 2.</p>
+<h2>Step 5: Configure Mocha</h2>
+<p>To configure Mocha, create a new file named <code>.mocharc.js</code> in the root of your project directory and add the following content:</p>
+<pre><code class="language-js">module.exports = {
+  spec:[&quot;test/**/*.test.js&quot;], 
+  require: [&quot;chai/register-expect.js&quot; ]
+}
+</code></pre>
+<p>This configuration tells Mocha to look for test files in the <code>test</code> directory and its subdirectories, and let you use <code>expect</code> assertions in your tests without redundand requires. The path to register function need to include the <code>.js</code> file extension.</p>
+<h2>Step 6: Run Your Tests</h2>
+<p>Finally, let's run our tests. Open your terminal and run the following command:</p>
+<pre><code class="language-bash">npx mocha
+</code></pre>
+<p>Mocha will automatically discover and run your test files. If everything is set up correctly, you should see the test result in your terminal.</p>
+<h2>Conclusion</h2>
+<p>Congratulations! You have successfully set up Mocha and Chai/Expect in your new npm project. You can now write and run test cases to ensure the quality and correctness of your JavaScript code. Happy testing!</p>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    2023-10-14 03:07:15
+  </body>
+</html>
